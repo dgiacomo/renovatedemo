@@ -1,0 +1,10 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+# gazelle:map_kind go_binary go_deployable //tools/go:def.bzl
+
+go_library(
+    name = "go_default_library",
+    srcs = ["demo.go"],
+    importpath = "github.com/achew22/renovatedemo/demo",
+    visibility = ["//visibility:private"],
+)
